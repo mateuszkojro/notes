@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update reps
-        run: apt update && apt upgrade
+        run: sudo apt update && apt upgrade
       - name: Install deps
-        run: apt install texlive-latex-extra make
+        run: sudo apt install texlive-latex-extra make
       - name: Rename output file
         run: mv notes.pdf notes.pdf
       - name: Release
