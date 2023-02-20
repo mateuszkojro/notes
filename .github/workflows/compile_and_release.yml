@@ -11,11 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: notes.tex
-          compiler: make
+      - name: Update reps
+        run: apt update && apt upgrade
+      - name: Install deps
+        run: apt install texlive-latex-extra make
       - name: Rename output file
         run: mv notes.pdf notes.pdf
       - name: Release
