@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Update reps
-        run: sudo apt update && apt upgrade
+        run: sudo apt update && sudo apt upgrade
       - name: Install deps
         run: sudo apt install texlive-latex-extra make
       - name: Rename output file
