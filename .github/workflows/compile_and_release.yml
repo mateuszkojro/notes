@@ -1,0 +1,24 @@
+
+name: "Compile and publish pdf"
+
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: notes.tex
+          compiler: pdflatex
+      - name: Rename output file
+        run: mv notes.pdf notes.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: notes.pdf
