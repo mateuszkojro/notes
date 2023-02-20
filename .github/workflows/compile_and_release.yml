@@ -14,7 +14,7 @@ jobs:
       - name: Update reps
         run: sudo apt update && sudo apt upgrade
       - name: Install deps
-        run: sudo apt install texlive-latex-extra make
+        run: sudo apt install -y texlive-latex-extra make biber
       - name: Compile 
         run: make
       - name: Rename output file
