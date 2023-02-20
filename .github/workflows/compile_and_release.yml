@@ -15,7 +15,7 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: notes.tex
-          compiler: pdflatex
+          compiler: make
       - name: Rename output file
         run: mv notes.pdf notes.pdf
       - name: Release
