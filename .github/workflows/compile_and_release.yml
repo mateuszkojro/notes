@@ -17,8 +17,6 @@ jobs:
         run: sudo apt install -y texlive-latex-extra make biber
       - name: Compile 
         run: make
-      - name: Rename output file
-        run: mv notes.pdf notes.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
