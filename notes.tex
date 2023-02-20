@@ -1,0 +1,25 @@
+
+\documentclass{artikel3}
+\usepackage[backend=biber,
+    		style=numeric-comp,
+    		maxcitenames=1,
+    		maxbibnames=1,
+    		%backref=true
+    		]{biblatex}
+
+\addbibresource{references.bib}
+
+\title{Notes}
+\date{}
+\author{Mateusz Kojro}
+
+\begin{document}
+\maketitle
+
+\section{2023-02-20}
+
+In the video \cite{noria_yt} \cite{noria_slides} Jon Gjengset presents his novel concurrent database called \textit{Noria}\cite{noria} an interesting way of implementing lockless map based on a swaping pointers approach \footnote{Rust implementation \cite{evmap}} - this allows for near linear scaling of the $reads/s$ with the number of cores used ($writes/s$ slowly goes down with number of cores)
+
+
+\printbibliography
+\end{document}
