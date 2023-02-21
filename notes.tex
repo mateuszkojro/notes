@@ -1,5 +1,5 @@
-
 \documentclass{artikel3}
+\usepackage[]{mdframed}
 \usepackage[backend=biber,
     		style=numeric-comp,
     		maxcitenames=1,
@@ -20,6 +20,45 @@
 
 In the video \cite{noria_yt} \cite{noria_slides} Jon Gjengset presents his novel concurrent database called \textit{Noria}\cite{noria} an interesting way of implementing lockless map based on a swaping pointers approach \footnote{Rust implementation \cite{evmap}} - this allows for near linear scaling of the $reads/s$ with the number of cores used ($writes/s$ slowly goes down with number of cores)
 
+\section{2023-02-21}
+
+Writing raw requests to a TCP server can be accomplished using:
+
+\begin{verbatim}
+printf "GET / HTTP/1.1\r\n\r\n" | nc google.com 80
+\end{verbatim}
+
+Why does venture capital funding lead to devaliuation of a product
+\begin{verbatim}
+https://pluralistic.net/2023/01/21/potemkin-ai/
+\end{verbatim}
+
+Improving code performance video by Matt Parker (using graph theory and bit manipultation)
+\begin{verbatim}
+https://www.youtube.com/watch?v=c33AZBnRHks
+\end{verbatim}
+
+
+
+\section*{To read}
+\begin{enumerate}
+	\item GNU C coding standards: 
+		\begin{verbatim}
+		https://www.gnu.org/prep/standards/standards.html
+		\end{verbatim}
+	\item Radioactive element accident:
+		\begin{verbatim}
+		https://en.wikipedia.org/wiki/Therac-25
+		\end{verbatim}
+	\item Psychological dramma director: 
+		\begin{verbatim}
+		https://en.wikipedia.org/wiki/Werner\_Herzog
+		\end{verbatim}
+	\item Larry Page and Sergey Brin paper about google: 
+		\begin{verbatim}
+		https://en.wikipedia.org/wiki/Werner\_Herzog
+		\end{verbatim}
+\end{enumerate}
 
 \printbibliography
 \end{document}
