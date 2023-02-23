@@ -1,6 +1,9 @@
 DATE=$(shell date)
 
-notes:
+notes.pdf: notes.md
+	pandoc --from=markdown --to=pdf notes.md -o notes.pdf
+
+notes.tex: notes.pdf
 	pdflatex notes.tex
 	biber notes
 	pdflatex notes.tex
@@ -10,6 +13,6 @@ clean:
 
 commit: notes.tex references.bib Makefile
 	git pull
-	git add notes.tex references.bib Makefile
+	git add notes.md notes.tex references.bib Makefile
 	git commit -m "$(DATE)"
 	git push
