@@ -3,10 +3,8 @@ DATE=$(shell date)
 notes.pdf: notes.md
 	pandoc --from=markdown --to=pdf notes.md -o notes.pdf
 
-# notes.pdf: notes.pdf
-# 	pdflatex notes.tex
-# 	biber notes
-# 	pdflatex notes.tex
+notes.html: notes.md
+	pandoc --from=markdown --to=html notes.md -o notes.html
 
 clean:
 	rm -f notes.pdf notes.blg notes.aux notes.log notes.run.xml notes.bcf
