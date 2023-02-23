@@ -11,7 +11,7 @@ notes.tex: notes.pdf
 clean:
 	rm -f notes.pdf notes.blg notes.aux notes.log notes.run.xml notes.bcf
 
-commit: notes.tex references.bib Makefile
+commit: notes.md notes.tex references.bib Makefile
 	git pull
 	git add notes.md notes.tex references.bib Makefile
 	git commit -m "$(DATE)"
