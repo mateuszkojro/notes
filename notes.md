@@ -24,3 +24,121 @@ In the video <https://www.youtube.com/watch?v=s19G6n0UjsM> (slides: <https://jon
 ## 2023-02-23
 
 - Might be an interesting blog about programming: <https://drewdevault.com/> kernel hacker, wrote sourcehat
+
+## 2023-02-24
+
+Found out new things I should read about at some point:
+- Fuzzy logic (non binary) - <https://en.wikipedia.org/wiki/Fuzzy_logic> moze zostac uzyta do rozwiazywania logicznych paradoksow (Sorties paradox, ship of Theseus)
+
+Also found some articles about quantum state preparation:
+
+- <https://www.nature.com/articles/s41598-021-85474-1#Sec2>
+- <https://arxiv.org/abs/1003.5760>
+
+Google has a quantum AI campus and some reaserch positions that require you to relocate to switzerland or US
+
+- <https://quantumai.google/learn/lab>
+
+Google careers site: <https://careers.google.com/>
+Google summer of code 2023:  <https://summerofcode.withgoogle.com/>
+
+Artilce about progress on quatum error correction at google: <https://blog.google/inside-google/message-ceo/our-progress-toward-quantum-error-correction/>
+
+Reset ssh-key for a given host:
+```bash
+ssh-keygen -R <host>
+```
+
+## 2023-02-25
+
+### Interview preparation
+
+- What is strategy pattern
+- What is iteratoe pattern
+
+#### Find the longest non repeating substring
+
+Dumb approach is to just make it qubuic
+
+Smart approachess:
+1. Saving last seen position of a char in hashmap:
+```c++
+    int LenghtOfLongestSubstringHashmap(std::string s) {
+      std::unordered_map<char, int> last_seen;
+      int max_len = 0;
+      int start = 0;
+
+      for (int i = 0 ; i < s.size(); i++) {
+        char znak = s[i];
+        auto last = last_seen.find(znak);
+        if (last != last_seen.end() && last_seen[znak] >= start) {
+          max_len = std::max(max_len, i - start);
+          start = last_seen[znak] + 1;
+        }
+        last_seen[znak] = i;
+      }
+
+      return std::max(max_len, (int)s.size() - start);
+    }
+```
+
+
+
+2. Two pointer
+```c++
+    int LenghtOfLongestSubstringTwoPointer(std::string s) {
+
+    }
+```
+
+Simle way of making code blocks in latex:
+```tex
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\begin{lstlisting}
+int main() {
+  return 0;
+}
+\end{lstlisting}
+```
+Problems i didn't finish:
+
+- <https://leetcode.com/problems/first-missing-positive/description/> - very hard
+- <https://leetcode.com/problems/smallest-number-in-infinite-set/> - idk yet looks kinda simple
+
+
+## 2023-02-26
+
+- The guy that hijcaked the plane and jumped off of it with the cash never to be found: <https://en.wikipedia.org/wiki/D._B._Cooper>
+- The guy that stole the jewels from Vienna museum: <https://en.wikipedia.org/wiki/Gerald_Blanchard>
+- Sweedish big heist: <https://en.wikipedia.org/wiki/Nationalmuseum_robbery>
+
+
+
+
+
+
+
+
+
+
+
+
