@@ -2,7 +2,7 @@
 
 ## 2023-02-20
 
-In the video <https://www.youtube.com/watch?v=s19G6n0UjsM> (slides: <https://jon.tsp.io/slides/rust-twosigma/>) Jon Gjengset presents his novel concurrent database called \textit{Noria} <https://github.com/mit-pdos/noria> an interesting way of implementing lockless map based on a swaping pointers approach (Rust implementation: <https://docs.rs/evmap/latest/evmap/>) - this allows for near linear scaling of the $reads/s$ with the number of cores used ($writes/s$ slowly goes down with number of cores)
+In the video <https://www.youtube.com/watch?v=s19G6n0UjsM> (slides: <https://jon.tsp.io/slides/rust-twosigma/>) Jon Gjengset presents his novel concurrent database called \textit{Noria} <https://github.com/mit-pdos/noria> an interesting way of implementing lockless map based on a swaping pointers approach (Rust implementation: <https://docs.rs/evmap/latest/evmap/>) - this allows for near linear scaling of the $reads/s$ with the number of cores used ($writes/s$ slowly goes down with number of cores) his thesis with more details: <https://jon.thesquareplanet.com/papers/phd-thesis.pdf>
 
 ## 2023-02-21
 
@@ -83,14 +83,6 @@ Smart approachess:
 ```
 
 
-
-2. Two pointer
-```c++
-    int LenghtOfLongestSubstringTwoPointer(std::string s) {
-
-    }
-```
-
 Simle way of making code blocks in latex:
 ```tex
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -131,7 +123,12 @@ Problems i didn't finish:
 - The guy that stole the jewels from Vienna museum: <https://en.wikipedia.org/wiki/Gerald_Blanchard>
 - Sweedish big heist: <https://en.wikipedia.org/wiki/Nationalmuseum_robbery>
 
+Pascal mugging - making future predictions based on expected future value is verry hard
+Measurability bias - 
 
+## 2023-02-27
+
+Read about F-score: <https://en.wikipedia.org/wiki/F-score>
 
 
 
